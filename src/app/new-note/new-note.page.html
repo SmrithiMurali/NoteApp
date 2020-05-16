@@ -1,0 +1,22 @@
+<form [formGroup]="createNote" (ngSubmit)="saveNote()">
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title>Note Title</ion-title> -->
+    <ion-input placeholder="Enter Title" formControlName="noteTitle"></ion-input>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    <ion-buttons slot="end">
+        <ion-button type="submit">
+            Save
+            <ion-icon slot="end" name="save"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-textarea rows="25" formControlName="noteContent"></ion-textarea>
+
+</ion-content>
+</form>
